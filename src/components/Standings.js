@@ -11,7 +11,7 @@ function Standings() {
     }, [])
     const gameStanding = Object.keys(standings).map((standing) => (
       <div>
-        <div>
+        <div className="standing">
           <table>
             <tr>
               <th>Team ID</th>
@@ -27,43 +27,54 @@ function Standings() {
           <img src={standings[standing].team_badge} alt="Badge" />
           <table>
             <tr>
+              <th></th>
               <th>Home</th>
               <th>Away</th>
               <th>Overall</th>
             </tr>
             <tr>
-              <p>
-                League Losses:
-                <td>{standings[standing].home_league_L}</td>
-              </p>
-              <p>
-                League Wins:
-                <td>{standings[standing].home_league_W}</td>
-              </p>
-              <p>
-                League Points:
-                <td>{standings[standing].home_league_PTS}</td>
-              </p>
-              <p>
-                League GA:
-                <td>{standings[standing].home_league_GA}</td>
-              </p>
-              <p>
-                League GF:
-                <td>{standings[standing].home_league_GF}</td>
-              </p>
-              <p>
-                League Position:
-                <td>{standings[standing].home_league_position}</td>
-              </p>
+              <td> League Losses:</td>
+              <td>{standings[standing].home_league_L}</td>
+              <td>{standings[standing].away_league_L}</td>
+              <td>{standings[standing].overall_league_L}</td>
+            </tr>
+            <tr>
+              <td> League Wins:</td>
+              <td>{standings[standing].home_league_W}</td>
+              <td>{standings[standing].away_league_W}</td>
+              <td>{standings[standing].overall_league_W}</td>
+            </tr>
+            <tr>
+            <td>League Points:</td>
+            <td>{standings[standing].home_league_PTS}</td>
+            <td>{standings[standing].away_league_PTS}</td>
+            <td>{standings[standing].overall_league_PTS}</td>
+            </tr>
+            <tr>
+              <td>League GA:</td>
+              <td>{standings[standing].home_league_GA}</td>
+              <td>{standings[standing].away_league_GA}</td>
+              <td>{standings[standing].overall_league_GA}</td>
+                </tr> 
+                <tr>
+              <td>League GF:</td>
+              <td>{standings[standing].home_league_GF}</td>
+              <td>{standings[standing].away_league_GF}</td>
+              <td>{standings[standing].overall_league_GF}</td>
+              </tr>
+              <tr>
+              <td>League Pos:</td>
+              <td>{standings[standing].home_league_position}</td>
+              <td>{standings[standing].away_league_position}</td>
+              <td>{standings[standing].overall_league_position}</td>
             </tr>
           </table>
         </div>
       </div>
     ));
     return (
-        <div>
-            standing
+        <div className="standings">
+           {gameStanding}
        </div>
    ) 
 }

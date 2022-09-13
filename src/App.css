@@ -74,3 +74,13 @@ nav a::after{
   content: "\a";
     white-space: pre;
 }
+.standings{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.standing{
+  border: 1px solid;
+  padding: 10px;
+  width: 20rem;
+ 
+}
