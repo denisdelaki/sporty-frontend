@@ -12,7 +12,7 @@ function Standings() {
     const gameStanding = Object.keys(standings).map((standing) => (
       <div>
         <div className="standing">
-          <table>
+          <table className="headTable">
             <tr>
               <th>Team ID</th>
               <th>Team Name</th>
@@ -27,7 +27,7 @@ function Standings() {
           <img src={standings[standing].team_badge} alt="Badge" />
           <table>
             <tr>
-              <th></th>
+              <th className="empty"></th>
               <th>Home</th>
               <th>Away</th>
               <th>Overall</th>

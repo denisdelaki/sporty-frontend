@@ -84,3 +84,9 @@ nav a::after{
   width: 20rem;
  
 }
+.headTable >tr> td, th {
+  border: 1px solid;
+}
+.empty{
+  border: none;
+}
