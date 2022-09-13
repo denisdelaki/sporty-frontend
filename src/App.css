@@ -67,6 +67,9 @@ button {
   width: 100%;
   height: 60%;
 }
+nav a{
+  text-decoration: none;
+}
 nav a::after{
   content: "\a";
     white-space: pre;

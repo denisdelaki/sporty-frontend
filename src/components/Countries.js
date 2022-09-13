@@ -14,7 +14,7 @@ function Countries() {
     }, [])
     const gameCountries = Object.keys(countries).map((country) => (
       <div >
-        <div key={countries[country]} className="country">
+        <div key={countries[country].country_id} className="country">
           <p>Country ID: {countries[country].country_id}</p>
           <img className="country-image" src={countries[country].country_logo} alt="logo" />
           <p>Country Name: {countries[country].country_name}</p>
