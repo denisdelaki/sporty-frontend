@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "./Nav";
+
 function Header() {
     return (
       <div className="header">
@@ -9,7 +9,7 @@ function Header() {
           <p>Executive Betting site</p>
         </div>
         <div>
-          <Nav />
+        
         </div>
       </div>
     );
