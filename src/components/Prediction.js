@@ -21,13 +21,13 @@ function Prediction() {
     }, [])
     const bet = Object.keys(predictions).map((Prediction) => (
       <div key={predictions[Prediction].match_id} className="bettable">
-       
         <table>
           <tr>
             <td>Game ID: {predictions[Prediction].match_id}</td>
-            <td>League:  {predictions[Prediction].league_name}</td>
+            <td>League: {predictions[Prediction].league_name}</td>
             <td>
-              Status:  {
+              Status:{" "}
+              {
                 (predictions[Prediction].match_status = ""
                   ? "To Start"
                   : predictions[Prediction].match_status)
@@ -49,12 +49,12 @@ function Prediction() {
           </tr>
         </table>
         <table>
-                <tr>
-                    <th>Home Team</th> 
-                    <th>Away Team</th>
-            </tr>
-          <tr> 
-            <td>{predictions[Prediction].match_hometeam_name}</td>
+          <tr>
+            <th>Home Team</th>
+            <th>Away Team</th>
+          </tr>
+          <tr>
+            <td> {predictions[Prediction].match_hometeam_name}</td>
             <td>{predictions[Prediction].match_awayteam_name}</td>
           </tr>
           <tr>
@@ -62,12 +62,36 @@ function Prediction() {
             <th>Draw</th>
             <th>Away</th>
             <th>Both</th>
+            <th>Un 1.5</th>
+            <th>OV 1.5</th>
+            <th>Un 2.5</th>
+            <th>OV 2.5</th>
           </tr>
           <tr>
-            <td>{predictions[Prediction].prob_HW / 100}</td>
-            <td>{predictions[Prediction].prob_D / 100}</td>
-            <td>{predictions[Prediction].prob_AW / 100}</td>
-            <td>{predictions[Prediction].prob_bts / 100}</td>
+            <td>
+              <button>{predictions[Prediction].prob_HW / 100}</button>
+            </td>
+            <td>
+              <button>{predictions[Prediction].prob_D / 100}</button>
+            </td>
+            <td>
+              <button>{predictions[Prediction].prob_AW / 100}</button>
+            </td>
+            <td>
+              <button>{predictions[Prediction].prob_bts / 100}</button>
+            </td>
+            <td>
+              <button>{predictions[Prediction].prob_U / 100}</button>
+            </td>
+            <td>
+              <button>{predictions[Prediction].prob_O / 100}</button>
+            </td>
+            <td>
+              <button>{predictions[Prediction].prob_U_1 / 100}</button>
+            </td>
+            <td>
+              <button>{predictions[Prediction].prob_O_1 / 100}</button>
+            </td>
           </tr>
         </table>
       </div>
