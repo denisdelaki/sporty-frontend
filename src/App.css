@@ -84,9 +84,25 @@ nav a::after{
   width: 20rem;
  
 }
-.headTable >tr> td, th {
+ th {
   border: 1px solid;
 }
 .empty{
   border: none;
+}
+.bettable{
+  border: 1px solid;
+  width: 30rem;
+  height: auto;
+  margin: 1rem;
+}
+.bet{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+table{
+  margin: 4px;
+}
+tr{
+  width: 100%;
 }

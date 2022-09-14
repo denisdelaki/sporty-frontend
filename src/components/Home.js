@@ -4,6 +4,7 @@ import {Routes, Route} from "react-router-dom"
 import "../App.css";
 import Countries from "./Countries";
 import Standings from "./Standings";
+import Prediction from "./Prediction";
 import Nav from "./Nav";
 function Home() {
    
@@ -21,6 +22,7 @@ function Home() {
             <Routes>
               <Route exact path="/" element={<Countries />}></Route>
               <Route exact path="/standings" element={<Standings />}></Route>
+              <Route exact path="/prediction" element={<Prediction />}></Route>
             </Routes>
           </div>
         </div>
